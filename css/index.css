@@ -1,0 +1,9 @@
+div.header{
+    background-image: url("img/header.png");
+    height: 500px;
+    width: auto;
+}
+
+h1.title{
+    color: aliceblue;
+}
