@@ -6,29 +6,139 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>HTMLの練習</title>
     <style type="text/css">
-    div.header{
-    background-image: url("img/header.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 400px;
-    width: auto;
-}
-    h1.title{
-    color: whitesmoke;
-    height: 80px;
-    width: auto;
-    line-height: 80px;
-    font-size: 80px;
-    display: flex;
-    position: absolute;
-    left: 0px;
-    top: 20px;
-    margin: 5px;
-}
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        overflow-x: hidden;
+    }
+    .mainContemts {
+        max-width: 1000px;
+        margin: 0 auto;
+        background:　#eee;
+        height: 600px;
+    }
+    .header {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        background-color: black;
+    }
+    .header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1200px;
+        height: 600px;
+        margin-top: -300px;
+        margin-left: -600px;
+    }
+    h1.title {
+        color: whitesmoke;
+        height: 80px;
+        width: auto;
+        line-height: 80px;
+        font-size: 80px;
+        display: flex;
+        position: absolute;
+        left: 30px;
+        top: 120px;
+        margin: 5px;
+    }
+    div.menu {
+        background-color: white;
+        color: black;
+        position: absolute;
+        top: 400px;
+        right: 80px;
+        width: 300px;
+        height: 60px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        line-height: 30px;
+        padding: 3px;
+    }
+    .sentence_config {
+        max-width: 960px;
+        justify-self: center;
+        margin: 0 auto;
+    }
+    h1.About, .Contact {
+        justify-content: center;
+        display: flex;
+        font-size: 50px;
+        line-height: 50px;
+        height: 50px;
+        margin-top: 100px;
+    }
+    div.back1,.back2 {
+        position: relative;
+        height: 60px;
+        top: -20px;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+    h2 {
+        margin: 20px;
+    }
+    p {
+        margin: 20px;
+    }
+    div.back_profile {
+        position: relative;
+        top: 0px;
+        background-color: gray;
+        height: 400px;
+    }
+    .img_profile {
+        position: relative;
+        top: 50px;
+    }
+
+    
+
     </style>
 </head>
 <body>
-    <div class="header"></div>
-    <h1 class="title">HELLO WORLD.</h1>
+    <div class="header">
+        <img src="img/header1.jpg">
+    </div>
+        <h1 class="title">HELLO<br>WORLD.</h1>
+    <div class="menu">Home / About / Information / <br>Works / Portofolio / Contact</div>
+    
+<div class="sentence_config">
+    <h1 class="About">About</h1>
+    <div class="back1">
+        <img src="img/kugiri.jpg">
+    </div>
+
+    <h2>
+        加賀谷愛美 <br><span>KAGAYA MANAMI</span>
+    </h2>
+    <p>1999年生まれ、20歳です。日本工学院八王子専門学校卒業を卒業し、フォース株式会社に勤めています。
+    <br>JavaScript,SQL,Linuxなどのプログラミング技術の習得に励んでいます。
+        学生時代、音楽制作を通して得た、チームワークでの作品制作の経験を武器に、
+        将来はネットワークエンジニアとして社会に貢献し、SEとして幅広い知識を持ったエンジニアになれるよう努力していきます。
+    </p>
+    <div class="back_profile">
+        <div class="img_profile">
+            <img src="img/profile.jpg"
+            { width="50%"} >
+        </div>
+    </div>
+
+    <h1 class="Contact">Contact</h1>
+    <div class="back2">
+        <img src="img/kugiri.jpg">
+    </div>
+
+    <p>Email : manamikagaya@force-corp.co.jp
+        <br>  Tell : 080-4204-8929
+        <br>         042-585-6893
+    </p>
+</div>
 </body>
 </html>
