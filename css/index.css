@@ -1,6 +1,8 @@
 div.header{
     background-image: url("img/header.png");
-    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
     width: auto;
 }
 
