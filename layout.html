@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>HTMLの練習</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        #titlescreen_back {
+            position: relative;
+            background-color: black;
+            height: 600px;
+            overflow: hidden;
+        }
+        #titlescreen_img {
+            position: absolute;
+            background-color: cornsilk;
+            height: 600px;
+            width: 1200px;
+            margin-left: -600px;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
+        }
+
+        #header_img {
+            position: relative;
+            background-color: darkcyan;
+            height: 15vw;
+        }
+            @media (min-width: 750px) {
+            #header_img {
+                height: 100px;
+            }
+        }
+        #header_icon {
+            background-color: darkgray;
+            float: right;
+            height: 15vw;
+            width: 20vw;
+        }
+            @media (min-width: 750px) {
+            #header_icon {
+                height: 100px;
+            }
+        }
+            @media (min-width: 750px) {
+            #header_icon {
+                width: 150px;
+            }
+        }
+        #title {
+            position: absolute;
+            left: 3vw;
+            top: 130px;
+            background-color: black;
+            font-size: 15vh;
+            color: blanchedalmond;
+        }
+        
+        #menu {
+            background-color: rgba(218, 218, 218, 0.534);
+            position: absolute;
+            top: 470px;
+            font-size: 25px;
+            right: 5vw;
+            padding: 20px; 
+        }
+        span.A{
+            color: coral;
+        }
+        span.B{
+            color: cornflowerblue;
+        }
+        span.C{
+            color: sandybrown;
+        }
+        a {
+            color: rgb(41, 52, 61);
+            text-decoration: none;
+        }
+        #side_img {
+            position: relative;
+            top: 0;
+            background-color: rgb(31, 31, 31);
+            height: 100%;
+
+        }
+        #background_content {
+            background-color: cadetblue;
+            position: relative;
+            top: 0;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .sub_title {
+            justify-content: center;
+            display: flex;
+            font-size: 8vw;
+            background-color: silver;
+            margin: 0;
+            padding: 40px 0px 0px 0px;
+        }
+            @media (min-width: 750px) {
+                .sub_title {
+                    font-size: 70px;
+                }
+            }
+        #About_delimiter, #Contact_delimiter {
+            height: 9vw;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            background-color: tomato;
+        }
+            @media (min-width: 750px) {
+                #About_delimiter, #Contact_delimiter {
+                    height: 80px;
+                }
+            }
+        
+        #background_item {
+            background-color: silver;
+            height: 600px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header_img">
+        <div id="header_icon"></div>
+    </div>
+    <div id="titlescreen_back">
+        <div id="titlescreen_img"></div>
+            <!-- <img src="img/header1.jpg"> -->
+    </div>
+
+    <h1 id="title">HELLO WORLD<span class="A">.</span></h1>
+    <nav id="menu">
+        <a href="#Home">Home</a> /
+        <a href="#About"><span class="B">A</span>bout</a> /
+        <a href="#Information">Information</a> /<br>
+        <a href="#Works">Works</a> /
+        <a href="#Portofolio">Portofolio</a> /
+        <a href="#Contact"><span class="C">C</span>ontact</a>
+    </nav>
+
+<div id="side_img">
+    <div id="background_content">
+        <h2 class="sub_title"><span class="B">A</span>bout</h2>
+        <div id="About_delimiter"></div>
+            <div id="background_item"></div>
+
+        <h2 class="sub_title"><span class="C">C</span>ontact</h2>
+        <div id="Contact_delimiter"></div>
+    </div>
+</div>
+</body>
+</html>
