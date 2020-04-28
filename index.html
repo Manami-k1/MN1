@@ -16,7 +16,7 @@
     .mainContemts {
         max-width: 1000px;
         margin: 0 auto;
-        background:　#eee;
+        background: #eee;
         height: 600px;
     }
     .header {
@@ -82,33 +82,129 @@
         justify-content: center;
     }
     h2 {
+        font-size: 30px;
+        line-height: auto;
         margin: 20px;
+    }
+    @media (min-width: 700px) {
+        h2 {
+            font-size: 30px;
+        }
     }
     p {
+        font-size: 18px;
+        line-height: auto;
         margin: 20px;
     }
+    @media (min-width: 700px) {
+        p{
+            font-size: 20px;
+        }
+    }
+
     div.back_profile {
         position: relative;
         top: 0px;
+        max-width: 700px;
+        justify-self: center;
+        margin: 0 auto;
         background-color: gainsboro;
-        height: 500px;
+        height: auto;
+        display: flex;
     }
     .img_profile {
         position: relative;
-        top: 50px;
+        height: auto;
+        top: 30px;
         left: 0;
         float: left;
+        display: flex;
+        background-color: gainsboro;
         
+    }
+    .img_profile2 {
+        position: relative;
+        height: auto;
+        top: 0;
+        left: 0;
+        float: left;
+        width: 50%;
     }
     .sentence_profile {
         top: 0px;
-        left: 0;
-        font-size: 30px;
-        line-height: 30px;
-        float: left;
-        background-color: aqua;
+        font-size: 5vw;
+        line-height: 5vw;
+        width: 40%;
+        height: auto;
+        margin: auto;
     }
-    
+    @media (min-width: 700px) {
+        .sentence_profile {
+            font-size: 30px;
+        }
+    }
+    @media (min-width: 700px) {
+        .sentence_profile {
+            line-height: 30px;
+        }
+    }
+
+    div.background_history {
+        position: relative;
+        top: 20px;
+        max-width: 700px;
+        justify-self: center;
+        margin: 0 auto;
+        background-color: gainsboro;
+        height: auto;
+        display: flex;
+    }
+    .back_history {
+        position: relative;
+        height: auto;
+        top: 30px;
+        left: 0;
+        float: left;
+        display: flex;
+        background-color: gainsboro;
+        margin-bottom: 30px;
+    }
+    .sentence_history {
+        top: 0;
+        left: 0;
+        font-size: 3.2vw;
+        line-height: 3.8vw;
+        width: 50%;
+        height: auto;
+        margin: 20px;
+        background-color: gold;
+    }
+    @media (min-width: 800px) {
+        .sentence_history {
+            font-size: 20px;
+        }
+    }
+    @media (min-width: 800px) {
+        .sentence_history {
+            line-height: 25px;
+        }
+    }
+    .img_history {
+        position: relative;
+        height: auto;
+        top: 0;
+        float: left;
+        width: 35%;
+        margin: 0 10 10 10;
+        background-color: indianred;
+    }
+    .contact_sentence {
+        font-size: 20px;
+        background-color: lightblue;
+        margin: 0 10 10 10;
+        padding: 0;
+        border: 0;
+    }
 
     </style>
 </head>
@@ -135,11 +231,36 @@
     </p>
     <div class="back_profile">
         <div class="img_profile">
-            <img src="img/profile.jpg"
-            { width="50%"} >
+            <div class="img_profile2">
+                <img src="img/profile.jpg"
+                { width="100%"
+                height= "auto"}>
+            </div>
+            <div class="sentence_profile">
+                <nobr>PROFILE</nobr><br>
+                    <nobr>1999.05.31 :</nobr><br>
+                    <nobr>BirthDay</nobr><br>
+                    <nobr>A : BloodType</nobr><br>
+                    <nobr>20 : Age</nobr>
+            </div>
         </div>
-        <div class="sentence_profile">
-            <p>PROFILE<br>1999.05.31 :<br>Birthday<br>A : BloodType<br>20 : Age</p>
+    </div>
+
+    <div class="background_history">
+        <div class="back_history">
+
+            <div class="sentence_history">
+                <nobr>HISTORY</nobr><br>
+                    <nobr>1999  新潟で生まれ、東京で育つ</nobr><br>
+                    <nobr>2018  都立小平高校卒業</nobr><br>
+                    <nobr>2020  日本工学院八王子専門学校卒業</nobr><br>
+                    <nobr>2020  フォース株式会社入社</nobr>
+            </div>
+            <div class="img_history">
+                <img src="img/history.jpg"
+                { width="100%"
+                height= "auto"}>
+            </div>
         </div>
     </div>
 
@@ -148,7 +269,7 @@
         <img src="img/kugiri.jpg">
     </div>
 
-    <p>Email : manamikagaya@force-corp.co.jp
+    <p class="contact_sentence">Email : manamikagaya@force-corp.co.jp
         <br>  Tell : 080-4204-8929
         <br>         042-585-6893
     </p>
