@@ -11,6 +11,33 @@
             padding: 0;
             overflow-x: hidden;
         }
+        #menu_cover {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: black;
+            opacity: .6;
+            top: 0;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #menu_side {
+            background-color: rgba(0, 0, 0, 0.76);
+            line-height: 40px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.726);
+            width: 180px;
+            min-height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            padding: 10px;
+            right: -180px;
+            z-index: 2;
+
+        }
         #titlescreen_back {
             position: relative;
             background-color: black;
@@ -19,7 +46,7 @@
         }
         #titlescreen_img {
             position: absolute;
-            background-color: cornsilk;
+            background-image: url("img/header1.jpg");
             height: 600px;
             width: 1200px;
             margin-left: -600px;
@@ -27,46 +54,33 @@
             left: 50%;
             margin-top: -300px;
         }
-
-        #header_img {
-            position: relative;
-            background-color: darkcyan;
-            height: 15vw;
-        }
-            @media (min-width: 750px) {
-            #header_img {
-                height: 100px;
-            }
-        }
-        #header_icon {
-            background-color: darkgray;
-            float: right;
+        /* #header_icon {
+            background-color: rgb(201, 201, 201);
             height: 15vw;
             width: 20vw;
         }
             @media (min-width: 750px) {
             #header_icon {
-                height: 100px;
+                height: 80px;
             }
         }
             @media (min-width: 750px) {
             #header_icon {
                 width: 150px;
             }
-        }
+        } */
         #title {
             position: absolute;
             left: 3vw;
-            top: 130px;
-            background-color: black;
+            top: 80px;
             font-size: 15vh;
-            color: blanchedalmond;
+            color: white;
         }
         
         #menu {
-            background-color: rgba(218, 218, 218, 0.534);
+            background-color: rgba(218, 218, 218, 0.685);
             position: absolute;
-            top: 470px;
+            top: 420px;
             font-size: 25px;
             right: 5vw;
             padding: 20px; 
@@ -78,7 +92,7 @@
             color: cornflowerblue;
         }
         span.C{
-            color: sandybrown;
+            color: palegreen;
         }
         a {
             color: rgb(41, 52, 61);
@@ -87,12 +101,12 @@
         #side_img {
             position: relative;
             top: 0;
-            background-color: rgb(31, 31, 31);
+            background-color: white;
             height: 100%;
 
         }
         #background_content {
-            background-color: cadetblue;
+            background-color: white;
             position: relative;
             top: 0;
             max-width: 960px;
@@ -102,7 +116,7 @@
             justify-content: center;
             display: flex;
             font-size: 8vw;
-            background-color: silver;
+            background-color: white;
             margin: 0;
             padding: 40px 0px 0px 0px;
         }
@@ -116,26 +130,163 @@
             top: 0;
             display: flex;
             justify-content: center;
-            background-color: tomato;
+            background-image: url("img/delimiter.jpg");
+            background-size: 100% 9vw;
         }
-            @media (min-width: 750px) {
+            @media (min-width: 960px) {
                 #About_delimiter, #Contact_delimiter {
                     height: 80px;
                 }
             }
-        
-        #background_item {
-            background-color: silver;
-            height: 600px;
 
+        #main_name {
+            margin: 30px 10px 10px 10px;
+            font-size: 30px;
+            line-height: 30px;
+            border-bottom: solid 2px black;
         }
+        #main_name_english {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        #main_sentence {
+            font-size: 15px;
+            margin: 10px 15px 30px 15px;
+        }
+        
+        #background_profile {
+            background-color: gainsboro;
+            height: auto;
+            margin: 0 auto;
+            max-width: 960px;
+            justify-self: center; 
+            display: flex;
+        }
+            @media (min-width: 850px) {
+                #background_profile, #background_history {
+                    width: 80%;
+                }
+            }
+        #profile_img_back {
+            width: 50%;
+            height: 40vw;
+            position: relative;
+            z-index: 1;
+        }
+
+        #profile_img {
+            background-image: url("img/profile.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            z-index: 2;
+            margin: 0 auto;
+        }
+        #profile_sentence_back {
+            width: 50%;
+            height: 40vw;
+            margin: 0;
+            position: relative;
+        }
+        #profile_sentence {
+            font-size: 5vw;
+            line-height: 6vw;
+            margin: 0 auto;
+            width: 35vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #background_history {
+            background-color: gainsboro;
+            height: auto;
+            margin: 0 auto;
+            max-width: 960px;
+            justify-self: center; 
+            display: flex;
+        }
+        #history_sentence_back {
+            width: 58%;
+            height: 35vw;
+            margin: 0;
+            position: relative;
+        }
+        #history_sentence {
+            font-size: 2.8vw;
+            margin: 0 auto;
+            width: 50vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .HISTORY {
+            font-size: 5vw;
+        }
+            @media (min-width: 960px) {
+                .HISTORY {
+                    font-size: 40px;
+                }
+            }
+        #history_img_back {
+            width: 42%;
+            height: 35vw;
+        }
+        #history_img {
+            background-image: url("img/history.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            margin: 0px 20px 0px 0px;
+        }
+            @media (min-width: 750px) {
+                #profile_sentence {
+                    font-size: 40px;
+                    line-height: 45px;
+                    width: 280px;
+                }
+            }
+            @media (min-width: 850px) {
+                #history_sentence {
+                    font-size: 20px;
+                    width: 400px;
+                }
+            }
+            @media (min-width: 750px) {
+                #profile_img_back, #profile_sentence_back {
+                    height: 300px;
+                }
+            }
+            @media (min-width: 750px) {
+                #history_sentence_back, #history_img_back {
+                    height: 250px;
+                }
+            }
+            #contact_sentence {
+                padding: 10px 20px 50px 20px;
+            }
+            p {
+                font-size: 15px;
+            }
 
     </style>
 </head>
 <body>
-    <div id="header_img">
-        <div id="header_icon"></div>
-    </div>
+<div id="menu_cover"></div>
+
+<div id="menu_side">
+    <ul>
+        <li>Home</li>
+        <li><span class="B">A</span>bout</li>
+        <li>Information</li>
+        <li>Works</li>
+        <li>Portofolio</li>
+        <li><span class="C">C</span>ontact</li>
+    </ul>
+</div>
     <div id="titlescreen_back">
         <div id="titlescreen_img"></div>
             <!-- <img src="img/header1.jpg"> -->
@@ -151,15 +302,72 @@
         <a href="#Contact"><span class="C">C</span>ontact</a>
     </nav>
 
-<div id="side_img">
     <div id="background_content">
         <h2 class="sub_title"><span class="B">A</span>bout</h2>
         <div id="About_delimiter"></div>
-            <div id="background_item"></div>
+    <h2 id="main_name">
+        加賀谷愛美 <br><span id="main_name_english">KAGAYA MANAMI</span>
+    </h2>
+    <p id="main_sentence">1999年生まれ、20歳です。日本工学院八王子専門学校卒業を卒業し、フォース株式会社に勤めています。
+    <br>JavaScript,SQL,Linuxなどのプログラミング技術の習得に励んでいます。
+        学生時代、音楽制作を通して得た、チームワークでの作品制作の経験を武器に、
+        将来はネットワークエンジニアとして社会に貢献し、SEとして幅広い知識を持ったエンジニアになれるよう努力していきます。
+    </p>
+
+    <div id="background_profile">
+        <div id="profile_img_back">
+            <div id="profile_img"></div>
+        </div>
+        <div id=profile_sentence_back>
+            <p id="profile_sentence">
+                <nobr>PROFILE</nobr><br>
+                <nobr>1999.05.31 :</nobr><br>
+                <nobr>BirthDay</nobr><br>
+                <nobr>A : BloodType</nobr><br>
+                <nobr>20 : Age</nobr>
+            </p>
+        </div>
+    </div>
+
+    <div id="background_history"> 
+        <div id="history_sentence_back">
+            <p id="history_sentence">
+                <nobr><span class="HISTORY">HISTORY</span></nobr><br>
+                <nobr>1999  新潟で生まれ、東京で育つ</nobr><br>
+                <nobr>2018  都立小平高校卒業</nobr><br>
+                <nobr>2020  日本工学院八王子専門学校卒業</nobr><br>
+                <nobr>2020  フォース株式会社入社</nobr>
+            </p>
+        </div>
+        <div id="history_img_back">
+            <div id="history_img"></div>
+        </div>
+    </div>
 
         <h2 class="sub_title"><span class="C">C</span>ontact</h2>
         <div id="Contact_delimiter"></div>
-    </div>
+
+        <p id="contact_sentence">
+            Email : manamikagaya@force-corp.co.jp
+            <br>&ensp;&ensp;
+            Tell : 080-4204-8929
+            <br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            042-585-6893
+        </p>
 </div>
+
+<script>
+    'use strict';
+    const menuSide = document.getElementById('menu_side');
+    const menuCover = document.getElementById('menu_cover');
+    menuSide.addEventListener ('mouseover', () => {
+        menuSide.className = 'menu-open';
+        menuCover.className = 'menu-open';
+    });
+    menuSide.addEventListener ('mouseleave', () => {
+        menuSide.className = '';
+        menuCover.className = '';
+    });
+</script>
 </body>
 </html>
