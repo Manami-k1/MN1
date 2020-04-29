@@ -7,21 +7,20 @@
     <title>HTMLの練習</title>
     <style type="text/css">
         body {
-            margin: 0;
+            margin: 0;;
             padding: 0;
             overflow-x: hidden;
         }
         #menu_cover {
             height: 100%;
             width: 100%;
-            position: absolute;
+            position: fixed;
             background-color: black;
             opacity: .6;
             top: 0;
             z-index: 1;
-            top: 0;
             left: 0;
-            display: none;
+            /* display: none; */
         }
 
         #menu_side {
@@ -29,20 +28,23 @@
             line-height: 40px;
             font-size: 20px;
             color: rgba(255, 255, 255, 0.726);
-            width: 180px;
-            min-height: 100%;
-            position: absolute;
-            box-sizing: border-box;
-            padding: 10px;
+            width: 200px;
             right: -180px;
+            min-height: 100%;
+            position: fixed;
+            box-sizing: border-box;
+            padding: 60px 10px 10px 10px;
             z-index: 2;
 
         }
         #titlescreen_back {
             position: relative;
             background-color: black;
+            left: 0;
+            right: 0;
             height: 600px;
-            overflow: hidden;
+           
+            
         }
         #titlescreen_img {
             position: absolute;
@@ -170,8 +172,6 @@
         #profile_img_back {
             width: 50%;
             height: 40vw;
-            position: relative;
-            z-index: 1;
         }
 
         #profile_img {
@@ -180,7 +180,6 @@
             background-repeat: no-repeat;
             background-position: center;
             height: 100%;
-            z-index: 2;
             margin: 0 auto;
         }
         #profile_sentence_back {
@@ -361,8 +360,8 @@
     const menuSide = document.getElementById('menu_side');
     const menuCover = document.getElementById('menu_cover');
     menuSide.addEventListener ('mouseover', () => {
-        menuSide.className = 'menu-open';
-        menuCover.className = 'menu-open';
+        menuSide.className = 'menu_side-open';
+        menuCover.className = 'menu_cover-open';
     });
     menuSide.addEventListener ('mouseleave', () => {
         menuSide.className = '';
