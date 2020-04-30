@@ -4,276 +4,447 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>ポートフォリオ制作</title>
+    <title>HTMLの練習</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style type="text/css">
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        overflow-x: hidden;
-    }
-    .mainContemts {
-        max-width: 1000px;
-        margin: 0 auto;
-        background: #eee;
-        height: 600px;
-    }
-    .header {
-        position: relative;
-        overflow: hidden;
-        height: 600px;
-        background-color: black;
-    }
-    .header img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 1200px;
-        height: 600px;
-        margin-top: -300px;
-        margin-left: -600px;
-    }
-    h1.title {
-        color: whitesmoke;
-        height: 80px;
-        width: auto;
-        line-height: 80px;
-        font-size: 80px;
-        display: flex;
-        position: absolute;
-        left: 30px;
-        top: 120px;
-        margin: 5px;
-    }
-    div.menu {
-        background-color: white;
-        color: black;
-        position: absolute;
-        top: 400px;
-        right: 80px;
-        width: 300px;
-        height: 60px;
-        font-size: 15px;
-        display: flex;
-        justify-content: center;
-        line-height: 30px;
-        padding: 3px;
-    }
-    .sentence_config {
-        max-width: 960px;
-        justify-self: center;
-        margin: 0 auto;
-    }
-    h1.About, .Contact {
-        justify-content: center;
-        display: flex;
-        font-size: 50px;
-        line-height: 50px;
-        height: 50px;
-        margin-top: 100px;
-    }
-    div.back1,.back2 {
-        position: relative;
-        height: 60px;
-        top: -20px;
-        margin-top: 0;
-        display: flex;
-        justify-content: center;
-    }
-    h2 {
-        font-size: 30px;
-        line-height: auto;
-        margin: 20px;
-    }
-    @media (min-width: 700px) {
-        h2 {
-            font-size: 30px;
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-    }
-    p {
-        font-size: 18px;
-        line-height: auto;
-        margin: 20px;
-    }
-    @media (min-width: 700px) {
-        p{
-            font-size: 20px;
+        #menu_cover {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            background-color: black;
+            opacity: .6;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            display: none;
+            transition: .5s;
         }
-    }
 
-    div.back_profile {
-        position: relative;
-        top: 0px;
-        max-width: 700px;
-        justify-self: center;
-        margin: 0 auto;
-        background-color: gainsboro;
-        height: auto;
-        display: flex;
-    }
-    .img_profile {
-        position: relative;
-        height: auto;
-        top: 30px;
-        left: 0;
-        float: left;
-        display: flex;
-        background-color: gainsboro;
+        #menu_side {
+            background-color: rgba(247, 247, 247, 0.712);
+            width: 200px;
+            right: -200px;
+            min-height: 100%;
+            position: fixed;
+            box-sizing: border-box;
+            padding: 50px 0px 0px 0px;
+            z-index: 2;
+            transition: .7s;
+            font-size: 25px;
+        }
         
-    }
-    .img_profile2 {
-        position: relative;
-        height: auto;
-        top: 0;
-        left: 0;
-        float: left;
-        width: 50%;
-    }
-    .sentence_profile {
-        top: 0px;
-        font-size: 5vw;
-        line-height: 5vw;
-        width: 40%;
-        height: auto;
-        margin: auto;
-    }
-    @media (min-width: 700px) {
-        .sentence_profile {
-            font-size: 30px;
-        }
-    }
-    @media (min-width: 700px) {
-        .sentence_profile {
-            line-height: 30px;
-        }
-    }
-
-    div.background_history {
-        position: relative;
-        top: 20px;
-        max-width: 700px;
-        justify-self: center;
-        margin: 0 auto;
-        background-color: gainsboro;
-        height: auto;
-        display: flex;
-    }
-    .back_history {
-        position: relative;
-        height: auto;
-        top: 30px;
-        left: 0;
-        float: left;
-        display: flex;
-        background-color: gainsboro;
-        margin-bottom: 30px;
-    }
-    .sentence_history {
-        top: 0;
-        left: 0;
-        font-size: 3.2vw;
-        line-height: 3.8vw;
-        width: 50%;
-        height: auto;
-        margin: 20px;
-        background-color: gold;
-    }
-    @media (min-width: 800px) {
-        .sentence_history {
+        #icon {
+            /* background-image: url("img/alin-right-solid.svg"); */
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            color: rgba(0, 0, 0, 0.637);
             font-size: 20px;
+            line-height: 20px;
+            margin: 25px;
+            padding: 10px 4px 10px 4px;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0.664);
+            text-align: center;
+        } 
+        #titlescreen_back {
+            position: relative;
+            background-color: black;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 600px;
         }
-    }
-    @media (min-width: 800px) {
-        .sentence_history {
-            line-height: 25px;
+        #titlescreen_img {
+            position: absolute;
+            background-image: url("img/header1.jpg");
+            height: 600px;
+            width: 1200px;
+            margin-left: -600px;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
         }
-    }
-    .img_history {
-        position: relative;
-        height: auto;
-        top: 0;
-        float: left;
-        width: 35%;
-        margin: 0 10 10 10;
-        background-color: indianred;
-    }
-    .contact_sentence {
-        font-size: 20px;
-        background-color: lightblue;
-        margin: 0 10 10 10;
-        padding: 0;
-        border: 0;
-    }
+        
+        #title {
+            position: absolute;
+            left: 3vw;
+            top: 80px;
+            font-size: 15vh;
+            line-height: 19vh;
+            color: white;
+            transition-duration: .5s;
+            letter-spacing: 0.05em;
+        }
+            @media (max-height: 600px) {
+                #title  {
+                    font-size: 90px;
+                    line-height: 100px;
+                }
+            }
+            @media (min-height: 750px) {
+                #title  {
+                    font-size: 100px;
+                    line-height: 100px;
+                }
+            }
+            @media (min-width: 1100px) {
+                #title  {
+                    font-size: 120px;
+                    line-height: 140px;
+                }
+            }
+        #menu {
+            background-color: rgba(255, 255, 255, 0.719);
+            position: absolute;
+            top: 420px;
+            font-size: 25px;
+            right: 5vw;
+            padding: 20px;
+            border: 1px solid white;
+            
+        }
+            @media (min-width: 750px) {
+                #menu {
+                    font-size: 30px;
+                }
+            }
+        span.A{
+            color: coral;
+        }
+        span.B{
+            color: cornflowerblue;
+        }
+        span.C{
+            color: palegreen;
+        }
+        a {
+            color: rgba(45, 68, 73, 0.733);
+            text-decoration: none;
+        } 
+        
+
+        
+        #background_content {
+            background-color: white;
+            position: relative;
+            top: 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .sub_title {
+            justify-content: center;
+            display: flex;
+            font-size: 8vw;
+            background-color: white;
+            color: rgba(0, 0, 0, 0.856);
+            margin: 0;
+            padding: 100px 0px 0px 0px;
+        }
+            @media (min-width: 750px) {
+                .sub_title {
+                    font-size: 70px;
+                }
+            }
+        
+        #About_delimiter, #Contact_delimiter {
+            height: 9vw;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("img/delimiter.jpg");
+            background-size: 100% 9vw;
+        }
+            @media (min-width: 960px) {
+                #About_delimiter, #Contact_delimiter {
+                    height: 80px;
+                }
+            }
+
+        #main_name {
+            margin: 30px 2.5vw 10px 2.5vw;
+            font-size: 30px;
+            line-height: 30px;
+            border-bottom: solid 2px black;
+        }
+        #main_name_english {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        #main_sentence {
+            font-size: 3vw;
+            margin: 10px 4vw 30px 4vw;
+            color: rgb(41, 69, 94);
+        }
+            @media (min-width: 750px) {
+                #main_sentence {
+                    font-size: 20px;
+                }
+            }
+        
+        #background_profile {
+            background-color: gainsboro;
+            height: auto;
+            margin: 0 auto;
+            max-width: 960px;
+            justify-self: center; 
+            display: flex;
+        }
+            @media (min-width: 850px) {
+                #background_profile, #background_history {
+                    width: 80%;
+                }
+            }
+        #profile_img_back {
+            width: 50%;
+            height: 40vw;
+        }
+
+        #profile_img {
+            background-image: url("img/profile.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #profile_sentence_back {
+            width: 50%;
+            height: 40vw;
+            margin: 0;
+            position: relative;
+        }
+        #profile_sentence {
+            font-size: 5vw;
+            color: rgba(0, 0, 0, 0.74);
+            line-height: 6vw;
+            margin: 0 auto;
+            width: 35vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #background_history {
+            background-color: gainsboro;
+            height: auto;
+            margin: 0 auto;
+            max-width: 960px;
+            justify-self: center; 
+            display: flex;
+        }
+        #history_sentence_back {
+            width: 58%;
+            height: 35vw;
+            margin: 0;
+            position: relative;
+        }
+        #history_sentence {
+            font-size: 2.8vw;
+            color: rgba(0, 0, 0, 0.705);
+            margin: 0 auto;
+            width: 50vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .HISTORY {
+            font-size: 5vw;
+        }
+            @media (min-width: 960px) {
+                .HISTORY {
+                    font-size: 40px;
+                }
+            }
+        #history_img_back {
+            width: 42%;
+            height: 35vw;
+        }
+        #history_img {
+            background-image: url("img/history.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            margin: 0px 20px 0px 0px;
+        }
+            @media (min-width: 750px) {
+                #profile_sentence {
+                    font-size: 40px;
+                    line-height: 45px;
+                    width: 280px;
+                }
+            }
+            @media (min-width: 850px) {
+                #history_sentence {
+                    font-size: 20px;
+                    width: 350px;
+                }
+            }
+            @media (min-width: 750px) {
+                #profile_img_back, #profile_sentence_back {
+                    height: 300px;
+                }
+            }
+            @media (min-width: 750px) {
+                #history_sentence_back, #history_img_back {
+                    height: 250px;
+                }
+            }
+        #contact_sentence {
+            padding: 10px 20px 30px 10px;
+            margin: 2vw;
+        }
+            p {
+                font-size: 3.5vw;
+                color:  rgb(41, 69, 94);
+            }
+            @media (min-width: 750px) {
+                #contact_sentence {
+                    font-size: 30px;
+                }
+            }
+        #icon.open {
+            cursor: pointer;
+        }
+        
+        #menu_side.open {
+            right: 0;
+        }
+        #menu_cover.cover {
+            display: block;
+        }
+        #menu_side.close {
+            left: -200px;
+            z-index: 30;
+        }
+        #cover.close2 {
+            display: none;
+        }
+        #icon.pointer {
+            cursor: pointer;
+            background-color: rgba(175, 238, 238, 0.514);
+        }
+        #icon.color_change {
+            background-color: rgba(255, 255, 255, 0.664);
+        }
 
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="img/header1.jpg">
-    </div>
-    
-    <h1 class="title">HELLO<br>WORLD.</h1>
-    <div class="menu">Home / About / Information / <br>Works / Portofolio / Contact</div>
-    
-<div class="sentence_config">
-    <h1 class="About">About</h1>
-    <div class="back1">
-        <img src="img/kugiri.jpg">
+<div id="menu_cover"></div>
+<div id="icon">MENU</div>
+
+<div id="menu_side">
+    <ul id="menu_side_sentence">
+        <li><a href="#Home">Home</a></li><br />
+        <li><a href="#About"><span class="B">A</span>bout</a></li><br />
+        <li><a href="#Information">Information</a></li><br />
+        <li><a href="#Works">Works</a></li><br />
+        <li><a href="#Portofolio">Portofolio</a></li><br />
+        <li><a href="#Contact"><span class="C">C</span>ontact</a></li>
+    </ul>
+</div>
+    <div id="titlescreen_back">
+        <div id="titlescreen_img"></div>
+            <!-- <img src="img/header1.jpg"> -->
     </div>
 
-    <h2>
-        加賀谷愛美 <br><span>KAGAYA MANAMI</span>
+    <h1 id="title">HELLO WORLD<span class="A">.</span></h1>
+    <div id="menu">
+        <nav>
+            <a href="#Home">Home</a> /
+            <a href="#About"><span class="B">A</span>bout</a> /
+            <a href="#Information">Information</a> /<br>
+            <a href="#Works">Works</a> /
+            <a href="#Portofolio">Portofolio</a> /
+            <a href="#Contact"><span class="C">C</span>ontact</a>
+        </nav>
+    </div>
+
+    <div id="background_content">
+        <a name="About"><h2 class="sub_title"><span class="B">A</span>bout</h2></a>
+        <div id="About_delimiter"></div>
+    <h2 id="main_name">
+        加賀谷愛美 <br><span id="main_name_english">KAGAYA MANAMI</span>
     </h2>
-    <p>1999年生まれ、20歳です。日本工学院八王子専門学校卒業を卒業し、フォース株式会社に勤めています。
+    <p id="main_sentence">1999年生まれ、20歳です。日本工学院八王子専門学校卒業を卒業し、フォース株式会社に勤めています。
     <br>JavaScript,SQL,Linuxなどのプログラミング技術の習得に励んでいます。
         学生時代、音楽制作を通して得た、チームワークでの作品制作の経験を武器に、
         将来はネットワークエンジニアとして社会に貢献し、SEとして幅広い知識を持ったエンジニアになれるよう努力していきます。
     </p>
-    <div class="back_profile">
-        <div class="img_profile">
-            <div class="img_profile2">
-                <img src="img/profile.jpg"
-                { width="100%"
-                height= "auto"}>
-            </div>
-            <div class="sentence_profile">
+
+    <div id="background_profile">
+        <div id="profile_img_back">
+            <div id="profile_img"></div>
+        </div>
+        <div id=profile_sentence_back>
+            <p id="profile_sentence">
                 <nobr>PROFILE</nobr><br>
-                    <nobr>1999.05.31 :</nobr><br>
-                    <nobr>BirthDay</nobr><br>
-                    <nobr>A : BloodType</nobr><br>
-                    <nobr>20 : Age</nobr>
-            </div>
+                <nobr>1999.05.31 :</nobr><br>
+                <nobr>BirthDay</nobr><br>
+                <nobr>A : BloodType</nobr><br>
+                <nobr>20 : Age</nobr>
+            </p>
         </div>
     </div>
 
-    <div class="background_history">
-        <div class="back_history">
-
-            <div class="sentence_history">
-                <nobr>HISTORY</nobr><br>
-                    <nobr>1999  新潟で生まれ、東京で育つ</nobr><br>
-                    <nobr>2018  都立小平高校卒業</nobr><br>
-                    <nobr>2020  日本工学院八王子専門学校卒業</nobr><br>
-                    <nobr>2020  フォース株式会社入社</nobr>
-            </div>
-            <div class="img_history">
-                <img src="img/history.jpg"
-                { width="100%"
-                height= "auto"}>
-            </div>
+    <div id="background_history"> 
+        <div id="history_sentence_back">
+            <p id="history_sentence">
+                <nobr><span class="HISTORY">HISTORY</span></nobr><br>
+                <nobr>1999  新潟で生まれ、東京で育つ</nobr><br>
+                <nobr>2018  都立小平高校卒業</nobr><br>
+                <nobr>2020  日本工学院八王子専門学校卒業</nobr><br>
+                <nobr>2020  フォース株式会社入社</nobr>
+            </p>
+        </div>
+        <div id="history_img_back">
+            <div id="history_img"></div>
         </div>
     </div>
 
-    <h1 class="Contact">Contact</h1>
-    <div class="back2">
-        <img src="img/kugiri.jpg">
-    </div>
+        <a name="Contact"><h2 class="sub_title"><span class="C">C</span>ontact</h2></a>
+        <div id="Contact_delimiter"></div>
 
-    <p class="contact_sentence">Email : manamikagaya@force-corp.co.jp
-        <br>  Tell : 080-4204-8929
-        <br>         042-585-6893
-    </p>
+        <p id="contact_sentence">
+            Email : manamikagaya@force-corp.co.jp
+            <br>&ensp;&ensp;
+            Tell : 080-4204-8929
+            <br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            042-585-6893
+        </p>
 </div>
+
+<script>
+    'use strict';;
+    const icon = document.getElementById('icon');
+    const side = document.getElementById('menu_side');
+    const cover = document.getElementById('menu_cover');
+    icon.addEventListener ('click', () => {
+        icon.className = 'open';
+        side.className = 'open'
+        cover.className = 'cover';
+    });
+    icon.addEventListener ('mouseover', () => {
+        icon.className = 'pointer';
+        sude.className = 'side_mouseover';
+    });
+    side.addEventListener ('mouseleave', () => {
+        side.className = 'close';
+        cover.className = 'close2';
+    });
+    icon.addEventListener ('mouseleave', () => {
+        icon.className = 'color_change';
+    });
+</script>
 </body>
 </html>
